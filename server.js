@@ -3,12 +3,10 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
+const logger = require("morgan")
 
-var corsOptions = {
-  origin: "http://localhost:8081"
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
+app.use(logger('dev'))
 
 // parse requests of content-type - application/json
 app.use(express.json());  /* bodyParser.json() is deprecated */

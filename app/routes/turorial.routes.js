@@ -3,6 +3,12 @@ module.exports = app => {
 
   var router = require("express").Router();
 
+  router.post("/add", (req,res)=>{
+    res.status(201).send({
+      message: "success"
+    })
+  });
+
   // Create a new Tutorial
   router.post("/", tutorials.create);
 
@@ -24,5 +30,5 @@ module.exports = app => {
   // Create a new Tutorial
   router.delete("/", tutorials.deleteAll);
 
-  app.use("/api/tutorials", router);
+  app.use("/api", router);
 };
