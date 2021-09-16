@@ -4,6 +4,27 @@ module.exports = app => {
   var router = require("express").Router();
 
   router.post("/add", (req,res)=>{
+
+    // const info = new Info({
+    //     _id: new mongoose.Types.ObjectId(),
+    //     type: req.body.type,
+    //     depot: req.body.depot
+    // })
+    // info.save()
+    // .then(result => {
+    //     console.log(result)
+    //     res.status(201).json({
+    //         message: "Info added for this product",
+    //         Info: result
+    //     })
+    // })
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json({
+    //         error: err
+    //     })
+    // })
+
     res.status(201).send({
       message: "success"
     })
